@@ -8,7 +8,7 @@
     <packaging>jar</packaging>
 
     <name>decemberstreams</name>
-    <url>http://maven.apache.org</url>
+    <url>https://github.com/dominisz/decemberstreams</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,12 +27,6 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.0.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>3.8.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

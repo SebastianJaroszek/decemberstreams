@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import static java.util.Arrays.asList;
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static pl.dominisz.decemberstreams.Grouping.groupByNationality;
 
 /*
@@ -21,8 +21,8 @@ public class GroupingTest {
         Person eva = new Person("Eva", 42, "Norwegian");
         List<Person> collection = asList(sara, eva, viktor);
         Map<String, List<Person>> result = groupByNationality(collection);
-        assertThat(result.get("Norwegian")).hasSameElementsAs(asList(sara, eva));
-        assertThat(result.get("Serbian")).hasSameElementsAs(asList(viktor));
+        assertEquals(result.get("Norwegian"), asList(sara, eva));
+        assertEquals(result.get("Serbian"), asList(viktor));
     }
 
 }

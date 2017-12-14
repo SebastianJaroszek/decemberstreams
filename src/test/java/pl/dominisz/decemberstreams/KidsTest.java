@@ -3,9 +3,11 @@ package pl.dominisz.decemberstreams;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.Set;
 
 import static java.util.Arrays.asList;
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static pl.dominisz.decemberstreams.Kids.getKidNames;
 
 /*
@@ -20,9 +22,11 @@ public class KidsTest {
         Person eva = new Person("Eva", 42);
         Person anna = new Person("Anna", 5);
         List<Person> collection = asList(sara, eva, viktor, anna);
-        assertThat(getKidNames(collection))
-                .contains("Sara", "Anna")
-                .doesNotContain("Viktor", "Eva");
+        Set<String> result = getKidNames(collection);
+        assertTrue(result.contains("Sara"));
+        assertTrue(result.contains("Anna"));
+        assertFalse(result.contains("Viktor"));
+        assertFalse(result.contains("Eva"));
     }
 
 }

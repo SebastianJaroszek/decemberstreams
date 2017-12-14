@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static java.util.Arrays.asList;
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static pl.dominisz.decemberstreams.PeopleStats.getStats;
 
 /*
@@ -20,32 +21,27 @@ public class PeopleStatsTest {
 
     @Test
     public void getStatsShouldReturnAverageAge() {
-        assertThat(getStats(collection).getAverage())
-                .isEqualTo((double)(4 + 40 + 42) / 3);
+        assertEquals(getStats(collection).getAverage(),(double)(4 + 40 + 42) / 3, 0.001);
     }
 
     @Test
     public void getStatsShouldReturnNumberOfPeople() {
-        assertThat(getStats(collection).getCount())
-                .isEqualTo(3);
+        assertTrue(getStats(collection).getCount() == 3);
     }
 
     @Test
     public void getStatsShouldReturnMaximumAge() {
-        assertThat(getStats(collection).getMax())
-                .isEqualTo(42);
+        assertTrue(getStats(collection).getMax() == 42);
     }
 
     @Test
     public void getStatsShouldReturnMinimumAge() {
-        assertThat(getStats(collection).getMin())
-                .isEqualTo(4);
+        assertTrue(getStats(collection).getMin() == 4);
     }
 
     @Test
     public void getStatsShouldReturnSumOfAllAges() {
-        assertThat(getStats(collection).getSum())
-                .isEqualTo(40 + 42 + 4);
+        assertTrue(getStats(collection).getSum() == 40 + 42 + 4);
     }
 
 }
