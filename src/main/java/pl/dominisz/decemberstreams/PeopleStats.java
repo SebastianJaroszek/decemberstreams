@@ -5,9 +5,6 @@ import java.util.List;
 
 public class PeopleStats {
 
-    private PeopleStats() {
-    }
-
     public static Stats getStats7(List<Person> people) {
         long sum = 0;
         int min = people.get(0).getAge();

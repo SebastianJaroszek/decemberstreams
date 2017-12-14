@@ -7,9 +7,6 @@ import static java.util.stream.Collectors.toList;
 
 public class FlatCollection {
 
-    private FlatCollection() {
-    }
-
     public static List<String> transform7(List<List<String>> collection) {
         List<String> newCollection = new ArrayList<>();
         for (List<String> subCollection : collection) {
