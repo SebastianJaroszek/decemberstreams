@@ -8,6 +8,7 @@ import static java.util.Arrays.asList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static pl.dominisz.decemberstreams.PeopleStats.getStats;
+import static pl.dominisz.decemberstreams.PeopleStats.getStats7;
 
 /*
 Get people statistics: average age, count, maximum age, minimum age and sum og all ages. ;
@@ -18,6 +19,31 @@ public class PeopleStatsTest {
     Person viktor = new Person("Viktor", 40);
     Person eva = new Person("Eva", 42);
     List<Person> collection = asList(sara, eva, viktor);
+
+    @Test
+    public void getStatsShouldReturnAverageAge7() {
+        assertEquals(getStats7(collection).getAverage(),(double)(4 + 40 + 42) / 3, 0.001);
+    }
+
+    @Test
+    public void getStatsShouldReturnNumberOfPeople7() {
+        assertTrue(getStats7(collection).getCount() == 3);
+    }
+
+    @Test
+    public void getStatsShouldReturnMaximumAge7() {
+        assertTrue(getStats7(collection).getMax() == 42);
+    }
+
+    @Test
+    public void getStatsShouldReturnMinimumAge7() {
+        assertTrue(getStats7(collection).getMin() == 4);
+    }
+
+    @Test
+    public void getStatsShouldReturnSumOfAllAges7() {
+        assertTrue(getStats7(collection).getSum() == 40 + 42 + 4);
+    }
 
     @Test
     public void getStatsShouldReturnAverageAge() {
