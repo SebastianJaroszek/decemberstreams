@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static pl.dominisz.decemberstreams.Partitioning.partitionAdults;
 
 /*
-Partition adults and kids
+Partition adults and kids ; partition by
  */
 public class PartitioningTest {
 

@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static pl.dominisz.decemberstreams.ToUpperCase.transform;
 
 /*
-Convert elements of a collection to upper case.
+Convert elements of a collection to upper case. ; map
  */
 public class ToUpperCaseTest {
 

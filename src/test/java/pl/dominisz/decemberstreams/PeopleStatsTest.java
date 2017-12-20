@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static pl.dominisz.decemberstreams.PeopleStats.getStats;
 
 /*
-Get people statistics: average age, count, maximum age, minimum age and sum og all ages.
+Get people statistics: average age, count, maximum age, minimum age and sum og all ages. ;
  */
 public class PeopleStatsTest {
 

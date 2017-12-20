@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static pl.dominisz.decemberstreams.Sum.calculate;
 
 /*
-Sum all elements of a collection
+Sum all elements of a collection ; sum
  */
 public class SumTest {
 
